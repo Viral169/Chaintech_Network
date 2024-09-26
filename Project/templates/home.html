@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block start %}
+
+ {% if messages %}
+        <div class="alert alert-primary" role="alert">
+          {% for message in messages %} {{message}} {% endfor %}
+        </div>
+        {% endif %}
+        
+<h1>Usernme is :{{request.user}}</h1>
+<br />
+<h1>
+  Email is :{{request.user.email}}
+  <h1>
+    <br />
+
+    <h2>Current Data and Time : {{current_time}}</h2>
+    <br />
+
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">Our Quots</h5>
+        <p class="card-text">{{quots}}</p>
+      </div>
+    </div>
+
+    {% endblock %}
+  </h1>
+</h1>
